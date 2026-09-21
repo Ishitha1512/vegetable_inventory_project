@@ -24,16 +24,17 @@ while True:
                                    match(im):
                                           case '1':
                                               item=input("Enter item:")
-                                              veg.append(item)
-                                              qty=float(input("Enter Quantity:"))
-                                              quantity.append(qty)
-                                              p=float(input("Enter price:"))
-                                              price.append(p)
-                                              cp=float(input("Enter cost price:"))
-                                              cprice.append(cp)
-                                              pf=p-cp
-                                              profit.append(pf)
-                                              print(f'{item} added to inventory..')
+                                              if item not in veg:
+                                                veg.append(item)
+                                                qty=float(input("Enter Quantity:"))
+                                                quantity.append(qty)
+                                                p=float(input("Enter price:"))
+                                                price.append(p)
+                                                cp=float(input("Enter cost price:"))
+                                                cprice.append(cp)
+                                                pf=p-cp
+                                                profit.append(pf)
+                                                print(f'{item} added to inventory..')
                                           case '2':
                                               item=input('Enter item you want to update:')
                                               idx=veg.index(item)
